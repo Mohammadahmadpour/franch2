@@ -1,0 +1,382 @@
+:root {
+  --color-primary: rgb(22, 23, 53);
+  --color-secondry: #fea700;
+  --color-white: rgb(255, 255, 255);
+  --color-blue: #161735;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Sora", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 40px 130px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+header .container {
+  padding: 40px;
+  background-color: var(--color-blue);
+  height: 750px;
+  justify-content: space-evenly;
+  /* position: sticky; */
+  /* top: -30px; */
+}
+
+.logo img {
+  max-width: 180px;
+  max-height: 60px;
+}
+
+.menu {
+  display: flex;
+}
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding-top: 20px;
+}
+
+.menu-item-list {
+  margin-right: 2.8rem;
+}
+
+.menu-item-list > a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-item-list > a:hover {
+  color: var(--color-secondry);
+}
+
+.menu-item li:first-child a {
+  color: var(--color-secondry);
+}
+
+.menu-item li:last-child a {
+  color: #383838;
+  background-color: var(--color-secondry);
+  border-color: var(--color-secondry);
+  border-radius: 24px;
+  padding: 8px 25px;
+}
+
+.menu-item li:last-child a:hover {
+  background-color: #383838;
+  color: var(--color-white);
+}
+
+.open-btn {
+  display: none;
+  color: var(--color-secondry);
+  padding-right: 2rem;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  background-color: var(--color-blue);
+  top: 0;
+  right: -15rem;
+  bottom: 0;
+  width: 15rem;
+  transition: all 250ms ease-in-out;
+}
+
+.mobile-menu--open {
+  right: 0;
+}
+
+.mobile-menu > a {
+  text-decoration: none;
+  color: #383838;
+  background-color: var(--color-secondry);
+  margin: 60px 20px 40px;
+  border-radius: 24px;
+  padding: 8px 80px;
+  display: inline-block;
+}
+
+.mobile-menu-item li {
+  list-style: none;
+}
+
+.mobile-menu-item li a {
+  display: block;
+  border-top: 1px solid #383838;
+  /* border-bottom: 1px solid #383838; */
+  padding-left: 10px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--color-white);
+  line-height: 2;
+}
+
+.mobile-menu-item li:last-child::after {
+  content: "";
+  display: block;
+  border-top: 1px solid #383838;
+}
+
+.btn-close {
+  display: block;
+  color: var(--color-secondry);
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.hero-section {
+  display: block;
+  top: -39rem;
+  position: relative;
+  margin: 0px auto;
+  width: 100%;
+}
+.franch {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  border-bottom-right-radius: 40px;
+}
+
+.slider {
+  position: absolute;
+  color: var(--color-white);
+  width: 30%;
+  height: 40%;
+}
+
+.hero-section > h3 {
+  display: flex;
+  position: absolute;
+  top: 22%;
+  right: 19%;
+  background-color: var(--color-secondry);
+  z-index: 0;
+  border-top-left-radius: 40px;
+  padding: 2% 4%;
+}
+
+.slider {
+  position: absolute;
+  height: 40%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  line-height: 3;
+  right: 10%;
+  top: 30%;
+  padding-bottom: 2rem;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+
+.slider img {
+  max-width: 100%;
+  border-top-left-radius: 40px;
+}
+
+.slider p {
+  color: black;
+}
+
+.slider a {
+  color: #383838;
+  background-color: var(--color-secondry);
+  border-color: var(--color-secondry);
+  border-radius: 24px;
+  padding: 8px 25px;
+  line-height: 2;
+  text-decoration: none;
+}
+
+.main-section {
+  display: flex;
+  width: 100%;
+  margin-top: -550px;
+  justify-content: center;
+}
+
+.company {
+  display: flex;
+  gap: 10rem;
+}
+.store {
+  flex-grow: 2;
+
+  display: block;
+
+  font-weight: 600;
+  max-width: 660px;
+  max-height: 170px;
+}
+
+.store h5 {
+  line-height: 4;
+  font-size: 16px;
+}
+.store p {
+  font-size: 32px;
+}
+
+.time-work {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 50px;
+  position: relative;
+  max-width: 440px;
+  max-height: 123px;
+}
+
+time-work h5 {
+  line-height: 4;
+}
+
+.clock {
+  position: absolute;
+  top: 58px;
+  font-size: 50px;
+  right: 220px;
+  color: var(--color-secondry);
+}
+
+.feature {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.feature-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 120px;
+  margin-top: 130px;
+}
+
+.box h5 {
+  font-weight: 600px;
+  font-size: 24px;
+}
+.box h6 {
+  font-weight: 400px;
+  font-size: 16px;
+}
+
+.box {
+  max-width: 366px;
+  max-height: 278px;
+}
+.module {
+  display: flex;
+  margin: 200px 140px;
+  background-color: rgba(255, 255, 255, .1);
+  max-width: 1100px;
+}
+
+.card img {
+  max-width: 530px;
+  max-height: 380px;
+}
+.card-tittle {
+  max-width: 530px;
+  max-height: 130px;
+}
+.card-tittle h5 {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: #202020;
+  margin-bottom: 30px
+
+}
+.card-tittle a{
+  font-family: Sora;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  padding: 15px 35px 15px 35px;
+  border-width: 0px;
+  border-radius: 24px;
+  margin: 0 10px 15px 0;
+  color: var(--color-white);
+  background-color: black;
+
+}
+.location {
+  padding: 30% 30px 0;
+  background-image: url(https://themes.muffingroup.com/be/franchise/wp-content/uploads/2021/10/franchise-wrap-bg3.webp);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+}
+/* .location-img img{
+  width: 100%;
+
+} */
+.location_on {
+  color: var(--color-secondry);
+  font-size: 43px;
+  position: absolute;
+  right: 43px;
+}
+.location-card {
+  background-color: #161735;
+  padding: 30px 30px 15px;
+  border-radius: 24px 0 24px 0;
+  line-height: 2rem;
+  margin: 0px auto -97px;
+  word-break: break-word;
+}
+.location-card h5 {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: var(--color-white);
+}
+.location-card p {
+  color: var(--color-white);
+  margin: 0 0 15px;
+}
+.location-card a {
+  font-family: Sora;
+  font-size: 16px;
+  line-height: 72px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  padding: 15px 35px 15px 35px;
+  border-width: 0px;
+  border-radius: 24px;
+  margin: 0 10px 15px 0;
+  color: var(--color-blue);
+  background-color: var(--color-secondry);
+  position: relative;
+  left: 238px;
+}
